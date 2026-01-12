@@ -461,22 +461,27 @@ then
 
 		TMP_PACKAGE="${SRC_PACKAGE_BUILD_GCC_MPFR##*/}"
 		unpack_buildtools ${TMP_PACKAGE} ${CUR_SRC_MAIN_FOLDER}
+		rm -rf mpfr
 		mv -v ${TMP_ARCHIVE_FOLDER} mpfr || exit 1
 
 		TMP_PACKAGE="${SRC_PACKAGE_BUILD_GCC_GMP##*/}"
 		unpack_buildtools ${TMP_PACKAGE} ${CUR_SRC_MAIN_FOLDER}
+		rm -rf gmp
 		mv -v ${TMP_ARCHIVE_FOLDER} gmp || exit 1
 
 		TMP_PACKAGE="${SRC_PACKAGE_BUILD_GCC_MPC##*/}"
 		unpack_buildtools ${TMP_PACKAGE} ${CUR_SRC_MAIN_FOLDER}
+		rm -rf mpc
 		mv -v ${TMP_ARCHIVE_FOLDER} mpc || exit 1
 
 		TMP_PACKAGE="${SRC_PACKAGE_BUILD_GCC_ISL##*/}"
 		unpack_buildtools ${TMP_PACKAGE} ${CUR_SRC_MAIN_FOLDER}
+		rm -rf isl
 		mv -v ${TMP_ARCHIVE_FOLDER} isl || exit 1
 
 		#TMP_PACKAGE="${SRC_PACKAGE_BUILD_GCC_CLOOG##*/}"
 		#unpack_buildtools ${TMP_PACKAGE} ${CUR_SRC_MAIN_FOLDER}
+		#rm -rf cloog
 		#mv -v ${TMP_ARCHIVE_FOLDER} cloog || exit 1
 
 		cd ${TMP_BUILD_FOLDER} || exit 1
